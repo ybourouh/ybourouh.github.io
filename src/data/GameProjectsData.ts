@@ -29,6 +29,8 @@ export default [
         <img class="phone-screenshot" src="https://fakeimg.pl/300x534/" alt="Optimistic Chubby Screenshot" />
     </div>
     `, "#23bd69", true),
+
+
     new ProjectData("project-2", "Singing Addict", "img/projects/project-2-icon.png", `
     <div class="paragraph">
         <strong>Optimistic Chubby Blog</strong> is a thing of beauty that I am so proud of. I could write about it for hours.
@@ -149,5 +151,40 @@ export default [
         <img class="pc-screenshot" src="https://fakeimg.pl/534x300/" alt="Cloud Drew Land Screenshot" />
         <img class="pc-screenshot" src="https://fakeimg.pl/534x300/" alt="Cloud Drew Land Screenshot" />
         <img class="pc-screenshot" src="https://fakeimg.pl/534x300/" alt="Cloud Drew Land Screenshot" />
-    </div>`, "#e48246")
+    </div>`, "#e48246"),
+
+
+
+    new ProjectData("light-in-the-dark", "A light in the dark", "img/projects/ALightInTheDark.gif", `
+    <div class="paragraph">
+        <strong>A light in the dark</strong> is a 2D platformer game currently in development where the player uses an orb of light to guide themself through dark levels and solve puzzles. The development of this game started as part of a small game jam, and I am currently working on it in my free time. The game is being developed using Godot.
+    </div>
+
+    </br>
+
+    <div class="paragraph">
+        <div class="notice">
+            You can follow the development and try the current build on <a href="https://xereen.itch.io/dayandnight" target="_blank">itch.io</a>.
+        </div>
+    </div>
+
+    <div class="paragraph center">
+        <img class="pc-screenshot" src="img/projects/light_title_screen.png" alt="A light in the dark title screen"/>
+    </div>
+
+    <div class="paragraph">
+        Most of the game's assets come from itch.io and are used in accordance to the license set in place by their owners, including commercial and non commercial usage.
+    </div>
+
+    </br>
+    
+    <div class="paragraph">
+        Main features :
+        <ul>
+            <li>Solo or Local multiplayer experience</li>
+            <li>Adaptative soundtrack</li>
+            <li>Advanced lighting</li>
+        </ul>
+    </div>
+    `, "#f1c80f", true)
 ];

@@ -16,8 +16,8 @@ const routes: Array<RouteConfig> = [
     component: () => import(/* webpackChunkName: "about" */ '../views/Resume.vue')
   },
   {
-    path: '/game-projects',
-    name: 'Game Projects',
+    path: '/projects',
+    name: 'Projects',
     component: () => import(/* webpackChunkName: "about" */ '../views/GameProjects.vue')
   },
   {
@@ -29,6 +29,11 @@ const routes: Array<RouteConfig> = [
     path: '/contact',
     name: 'Contact',
     component: () => import(/* webpackChunkName: "about" */ '../views/Contact.vue')
+  },
+  {
+    path: '/project/:id',
+    name: 'ProjectPage',
+    component: () => import(/* webpackChunkName: "project-page" */ '../views/ProjectPage.vue')
   },
   {
     path: '/404',

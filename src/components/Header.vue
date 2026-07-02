@@ -2,7 +2,7 @@
   <div class="header">
     <div class="nav-bar">
       <router-link to="/">About me</router-link>
-      <router-link to="/game-projects">Projects</router-link>
+      <router-link to="/projects">Projects</router-link>
       <!--<router-link to="/other-projects">Other stuff</router-link> -->
       <router-link to="/resume">Resume</router-link>
       <router-link to="/contact">Contact</router-link>
@@ -37,9 +37,9 @@ export default Vue.extend({
 
 a {
   text-transform: uppercase;
-  margin-left: 10px;
-  margin-right: 15px;
-  padding-bottom: 8px;
+  margin-left: 0px;
+  margin-right: 30px;
+  padding-bottom: 10px;
   white-space: nowrap;
   display: inline-block;
 }
@@ -55,7 +55,7 @@ a {
   }
 
   a {
-    margin-left: 9px;
+    margin-left: 0px;
     margin-right: 9px;
     padding-bottom: 0px;
   }

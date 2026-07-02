@@ -2,11 +2,11 @@
     <div>
       <div class="projects-list">
         <template v-for="project in projects">
-          <div
+          <router-link
             :key="project.id"
-              @click="showDetails(project)"
-              class="project-item"
-              :class="{ 'wide': project.isWide, 'high': project.isHigh }">
+            :to="'/project/' + project.id"
+            class="project-item"
+            :class="{ 'wide': project.isWide, 'high': project.isHigh }">
             <div class="project-item-image" :style="{ 'background-image': 'url(' + project.iconUrl + ')' }">
             </div>
             <div class="title-bar" :style="{ 'background-color': project.accentColor + 'DD' }">
@@ -14,51 +14,24 @@
                   {{ project.name }}
                 </div>
               </div>
-          </div>
+          </router-link>
         </template>
       </div>
-
-      <ProjectDetailsOverlay
-        v-on:close="showPopup = false"
-        :visible="showPopup"
-        :title="popupTitle"
-        :htmlContent="popupContent"
-        :color="popupColor"
-      />
     </div>
 </template>
 
 <script lang="ts">
 import Vue from "vue";
-import ProjectDetailsOverlay from "@/components/ProjectDetailsOverlay.vue";
 import ProjectData from "@/data/ProjectData.ts";
 
 export default Vue.extend({
   name: "ProjectsList",
-  components: {
-    ProjectDetailsOverlay,
-  },
   props: {
     projects: Array
   },
-  data: function () {
-    return {
-      showPopup: false,
-      popupTitle: "",
-      popupColor: "",
-      popupContent: ""
-    };
-  },
   methods: {
     showDetails: function (item: ProjectData) {
-      // if (event) {
-      //   alert(event.target);
-      // }
-      this.popupTitle = item.name;
-      this.popupColor = item.accentColor;
-      this.popupContent = item.htmlDescription;
-      this.showPopup = true;
-      window.scrollTo(0,0);
+      this.$router.push('/project/' + item.id);
     },
   },
 });
